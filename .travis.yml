@@ -22,4 +22,5 @@ script:
 after_script: # here's a build step block
   - pwd
   - ls -l
+  - ls
   - java -version
