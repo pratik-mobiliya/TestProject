@@ -1,0 +1,25 @@
+#language: php
+#dist: trusty
+#php:
+#- 5.5
+#- 5.4
+#- hhvm
+#script: phpunit Test.php
+env:
+  global:
+  - name="vishal"
+
+language: java
+
+jdk:
+- oraclejdk8
+
+script: 
+  - java -version
+  - javac FirstJavaProgram.java
+  - java FirstJavaProgram
+        
+after_script: # here's a build step block
+  - pwd
+  - ls -l
+  - java -version
